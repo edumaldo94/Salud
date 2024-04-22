@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/fondo_personalizado.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E6DFDF" /> <!-- Color de fondo -->
+    <corners android:radius="15dp" /> <!-- Opcional: redondear las esquinas -->
+</shape>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Explorador De Farmacias</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="configuracion">Configuración</string>
+    <string name="listadefarmacias">Listas De Farmacias</string>
+    <string name="mapa">Mapa</string>
+    <string name="salir">Salir</string>
+    <string name="config_category_title">Configuración de Idioma</string>
+    <string name="language_preference_title">Idioma</string>
+    <string name="language_preference_summary">Seleccione su idioma preferido</string>
+    <string name="map_config_category_title">Configuración de Mapa</string>
+    <string name="map_type_preference_title">Tipo de Mapa</string>
+    <string name="map_type_preference_summary">Seleccione el tipo de mapa que prefiera</string>
+    <string name="direccion_text">Dirección:</string>
+    <string name="farmacia_text">Farmacia</string>
+    <string name="horarios_text">Horarios de Atención:</string>
+    <string name="atras_text">Atrás</string>
+</resources>
