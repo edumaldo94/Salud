@@ -41,7 +41,7 @@ public class MapaFragment extends Fragment  implements SharedPreferences.OnShare
 
                     LatLng ULP = new LatLng(location.getLatitude(),  location.getLongitude());
                     googleMap.addMarker(new MarkerOptions().position(ULP).title("Aca estas vos wachim"));
-                      googleMap.moveCamera(CameraUpdateFactory.newLatLng(ULP));
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(ULP));
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ULP, 15));
                  //   googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
