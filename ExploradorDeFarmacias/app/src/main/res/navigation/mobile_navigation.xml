@@ -15,8 +15,11 @@
         android:id="@+id/nav_listadefarmacias"
         android:name="com.softulp.exploradordefarmacias.ui.listaDeFarmacias.ListaDeFarmaciasFragment"
         android:label="@string/listadefarmacias"
-        tools:layout="@layout/activity_lista_de_farmacias_main" >
+        tools:layout="@layout/fragment_listadefarmacias" >
 
+        <action
+            android:id="@+id/action_nav_listadefarmacias_to_farmaciaDetailsFragment"
+            app:destination="@id/farmaciaDetailsFragment" />
     </fragment>
 
     <fragment
@@ -29,4 +32,13 @@
         android:name="com.softulp.exploradordefarmacias.ui.salir.SalirFragment"
         android:label="@string/salir"
         tools:layout="@layout/fragment_salir" />
+    <fragment
+        android:id="@+id/farmaciaDetailsFragment"
+        android:name="com.softulp.exploradordefarmacias.ui.listaDeFarmacias.FarmaciaDetailsFragment"
+        android:label="activity_farmacia_details"
+        tools:layout="@layout/activity_farmacia_details" >
+        <action
+            android:id="@+id/action_farmaciaDetailsFragment_to_nav_listadefarmacias"
+            app:destination="@id/nav_listadefarmacias" />
+    </fragment>
 </navigation>

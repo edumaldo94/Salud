@@ -1,4 +1,4 @@
-package com.softulp.exploradordefarmacias.ui.listaDeFarmacias;
+/*package com.softulp.exploradordefarmacias.ui.listaDeFarmacias;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -57,3 +57,4 @@ private Button button;
 
     }
 }
+*/

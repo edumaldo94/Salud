@@ -34,6 +34,7 @@ public class MapaFragment extends Fragment  implements SharedPreferences.OnShare
         @Override
         public void onMapReady(GoogleMap googleMap) {
             googleMap2=googleMap;
+            mapViewModel.obtenerUltimaUbicacion();
             mapViewModel.getMLocation().observe(getViewLifecycleOwner(), new Observer<Location>() {
 
                   @Override
@@ -41,7 +42,7 @@ public class MapaFragment extends Fragment  implements SharedPreferences.OnShare
 
                     LatLng ULP = new LatLng(location.getLatitude(),  location.getLongitude());
                     googleMap.addMarker(new MarkerOptions().position(ULP).title("Aca estas vos wachim"));
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(ULP));
+                      googleMap.moveCamera(CameraUpdateFactory.newLatLng(ULP));
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ULP, 15));
                  //   googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
@@ -76,7 +77,7 @@ public class MapaFragment extends Fragment  implements SharedPreferences.OnShare
                              @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_mapa, container, false);
         mapViewModel = new ViewModelProvider(requireActivity()).get(MapaViewModel.class);
-        mapViewModel.obtenerUltimaUbicacion();
+
 
          SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);

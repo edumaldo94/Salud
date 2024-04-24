@@ -1,5 +1,6 @@
 package com.softulp.exploradordefarmacias.ui.listaDeFarmacias;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -47,15 +49,18 @@ public class ListaDeFarmaciasAdapter  extends RecyclerView.Adapter<ListaDeFarmac
         holder.nombre.setText(farmacia.getNombre());
         holder.dirección.setText(farmacia.getDirección());
 
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Obtener la farmacia seleccionada
-                Intent intent = new Intent(context, FarmaciaDetailsActivity.class);
-                intent.putExtra("horarios",farmacia.getHorarios());
-                intent.putExtra("foto",farmacia.getFoto());
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                Bundle bundle = new Bundle();
+                bundle.putString("horarios", farmacia.getHorarios());
+                bundle.putInt("foto", farmacia.getFoto());
+
+                bundle.putSerializable("farmacia",farmacia);
+                Navigation.findNavController((Activity) v.getContext(), R.id.nav_host_fragment_content_main).navigate(R.id.farmaciaDetailsFragment,bundle);
+
+
             }
         });
     }
@@ -68,7 +73,7 @@ public class ListaDeFarmaciasAdapter  extends RecyclerView.Adapter<ListaDeFarmac
     public class  FarmaciaViewHolder extends  RecyclerView.ViewHolder{
         TextView nombre, dirección,horarios ;
         ImageView foto;
-        Button button,btAtras;
+
 
         public FarmaciaViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -76,7 +81,7 @@ public class ListaDeFarmaciasAdapter  extends RecyclerView.Adapter<ListaDeFarmac
             dirección=itemView.findViewById(R.id.idDireccion);
             horarios= itemView.findViewById(R.id.iDhorarios);
             foto=itemView.findViewById(R.id.idFoto);
-            btAtras=itemView.findViewById(R.id.btnAtras);
+
         }
 
     }

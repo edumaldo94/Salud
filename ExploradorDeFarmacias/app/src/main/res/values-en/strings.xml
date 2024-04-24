@@ -24,8 +24,8 @@
     </string-array>
 
     <string-array name="language_entries">
-        <item>English</item>
         <item>Spanish</item>
+        <item>English</item>
     </string-array>
     <string name="config_category_title">Language Settings</string>
     <string name="language_preference_title">Language</string>
