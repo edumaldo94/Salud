@@ -117,7 +117,7 @@ public class MapaFragment extends Fragment  implements SharedPreferences.OnShare
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-      //  mapViewModel.pararLecturaPermanete();
+      //  mapViewModel.obtenerUltimaUbicacion();
 
     }
 

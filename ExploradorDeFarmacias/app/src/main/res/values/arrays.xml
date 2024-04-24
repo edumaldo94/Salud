@@ -14,12 +14,6 @@
         <item>terrain</item>
     </string-array>
 
-    <string-array name="language_entries">
-        <item>Español</item>
-        <item>Inglés</item>
-        <!-- Agrega más idiomas según necesites -->
-    </string-array>
-
     <string-array name="language_values">
         <item>es</item>
         <item>en</item>

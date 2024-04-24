@@ -49,7 +49,7 @@ public class ConfiguracionFragment extends PreferenceFragmentCompat implements S
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals("language")) {
             // Actualiza el idioma de la aplicación según la preferencia del usuario
-            String selectedLanguage = sharedPreferences.getString("language", "en");
+            String selectedLanguage = sharedPreferences.getString("language", "es");
             setLocale(selectedLanguage);
             // Reinicia la actividad principal para aplicar el cambio de idioma
             requireActivity().recreate();
